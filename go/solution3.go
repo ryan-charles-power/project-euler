@@ -1,10 +1,10 @@
-package main
+package solutions
 
 import (
 	"fmt"
 )
 
-func main() {
+func Solve3() {
 	var num int64 = 600851475143
 	original := num
 	var divisor int64 = 2

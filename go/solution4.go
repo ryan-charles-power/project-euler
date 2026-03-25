@@ -1,19 +1,12 @@
-package main
+package solutions
 
 import (
 	"fmt"
+	utils "project-euler/go/utils"
 	"strconv"
 )
 
-func Reverse(s string) string {
-	runes := []rune(s)
-	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
-	}
-	return string(runes)
-}
-
-func main() {
+func Solve4() {
 	product := 0
 	largestPalindrome := 0
 	iMax := 0
@@ -27,7 +20,7 @@ func main() {
 			if product > largestPalindrome {
 				// Then do string conversion and comparison
 				productStr := strconv.Itoa(product)
-				productStrReverse := Reverse(productStr)
+				productStrReverse := utils.ReverseString(productStr)
 				if productStr == productStrReverse {
 					largestPalindrome = product
 					iMax = i
