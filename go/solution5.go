@@ -1,8 +1,8 @@
-package main
+package solutions
 
 import "fmt"
 
-func main() {
+func Solve5() {
 	finished := false
 	i := 20
 	var result int

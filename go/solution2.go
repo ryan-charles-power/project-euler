@@ -1,12 +1,11 @@
-package main
+package solutions
 
 import (
 	"fmt"
 	"strconv"
 )
 
-func main() {
-
+func Solve2() {
 	i := 1
 	j := 1
 	sum := 0
