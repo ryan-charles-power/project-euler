@@ -48,65 +48,31 @@ func Solve11() {
 		for j := range 19 {
 			if i > 2 && j > 2 {
 				product, products = sumNorthWest(matrix, i, j)
-				if product > maxProduct {
-					maxProduct = product
-					maxProducts = products
-				}
-			}
-			if i > 2 && j < 17 {
-				product, products = sumSouthWest(matrix, i, j)
-				if product > maxProduct {
-					maxProduct = product
-					maxProducts = products
-				}
+				maxProduct, maxProducts = compareProducts(product, maxProduct, products, maxProducts)
 			}
 			if i < 17 && j > 2 {
 				product, products = sumNorthEast(matrix, i, j)
-				if product > maxProduct {
-					maxProduct = product
-					maxProducts = products
-				}
-			}
-			if i < 17 && j < 17 {
-				product, products = sumSouthEast(matrix, i, j)
-				if product > maxProduct {
-					maxProduct = product
-					maxProducts = products
-				}
-			}
-			if i > 2 {
-				product, products = sumWest(matrix, i, j)
-				if product > maxProduct {
-					maxProduct = product
-					maxProducts = products
-				}
-
+				maxProduct, maxProducts = compareProducts(product, maxProduct, products, maxProducts)
 			}
 			if i < 17 {
 				product, products = sumEast(matrix, i, j)
-				if product > maxProduct {
-					maxProduct = product
-					maxProducts = products
-				}
+				maxProduct, maxProducts = compareProducts(product, maxProduct, products, maxProducts)
 			}
 			if j > 2 {
 				product, products = sumNorth(matrix, i, j)
-				if product > maxProduct {
-					maxProduct = product
-					maxProducts = products
-				}
-			}
-			if j < 17 {
-				product, products = sumSouth(matrix, i, j)
-				if product > maxProduct {
-					maxProduct = product
-					maxProducts = products
-				}
+				maxProduct, maxProducts = compareProducts(product, maxProduct, products, maxProducts)
 			}
 		}
 	}
 
 	fmt.Printf("The max product is %d made of the products %d", maxProduct, maxProducts)
+}
+
+func compareProducts(product int, maxProduct int, products [4]int, maxProducts [4]int) (int, [4]int) {
+	if product > maxProduct {
+		return product, products
+	}
+	return maxProduct, maxProducts
 }
 
 func sumNorth(matrix [][]int, i int, j int) (int, [4]int) {
@@ -120,33 +86,11 @@ func sumNorth(matrix [][]int, i int, j int) (int, [4]int) {
 	return product, factors
 }
 
-func sumSouth(matrix [][]int, i int, j int) (int, [4]int) {
-	factor1 := matrix[i][j]
-	factor2 := matrix[i][j+1]
-	factor3 := matrix[i][j+2]
-	factor4 := matrix[i][j+3]
-	product := factor1 * factor2 * factor3 * factor4
-
-	factors := [4]int{factor1, factor2, factor3, factor4}
-	return product, factors
-}
-
 func sumEast(matrix [][]int, i int, j int) (int, [4]int) {
 	factor1 := matrix[i][j]
 	factor2 := matrix[i+1][j]
 	factor3 := matrix[i+2][j]
 	factor4 := matrix[i+3][j]
-	product := factor1 * factor2 * factor3 * factor4
-
-	factors := [4]int{factor1, factor2, factor3, factor4}
-	return product, factors
-}
-
-func sumWest(matrix [][]int, i int, j int) (int, [4]int) {
-	factor1 := matrix[i][j]
-	factor2 := matrix[i-1][j]
-	factor3 := matrix[i-2][j]
-	factor4 := matrix[i-3][j]
 	product := factor1 * factor2 * factor3 * factor4
 
 	factors := [4]int{factor1, factor2, factor3, factor4}
@@ -169,28 +113,6 @@ func sumNorthWest(matrix [][]int, i int, j int) (int, [4]int) {
 	factor2 := matrix[i-1][j-1]
 	factor3 := matrix[i-2][j-2]
 	factor4 := matrix[i-3][j-3]
-	product := factor1 * factor2 * factor3 * factor4
-
-	factors := [4]int{factor1, factor2, factor3, factor4}
-	return product, factors
-}
-
-func sumSouthEast(matrix [][]int, i int, j int) (int, [4]int) {
-	factor1 := matrix[i][j]
-	factor2 := matrix[i+1][j+1]
-	factor3 := matrix[i+2][j+2]
-	factor4 := matrix[i+3][j+3]
-	product := factor1 * factor2 * factor3 * factor4
-
-	factors := [4]int{factor1, factor2, factor3, factor4}
-	return product, factors
-}
-
-func sumSouthWest(matrix [][]int, i int, j int) (int, [4]int) {
-	factor1 := matrix[i][j]
-	factor2 := matrix[i-1][j+1]
-	factor3 := matrix[i-2][j+2]
-	factor4 := matrix[i-3][j+3]
 	product := factor1 * factor2 * factor3 * factor4
 
 	factors := [4]int{factor1, factor2, factor3, factor4}
