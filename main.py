@@ -8,7 +8,7 @@ def main():
 
     num = sys.argv[1]
     try:
-        # Dynamically imports 'solution5.py' and calls its 'solve()' function
+        # Dynamically imports 'solution___.py' and calls its 'solve()' function
         module = importlib.import_module(f"python.solution{num}")
         module.solve()
     except ImportError:
