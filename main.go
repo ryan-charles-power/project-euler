@@ -18,6 +18,8 @@ func main() {
 		"7": solution.Solve7,
 		// ...
 		"11": solution.Solve11,
+		// ...
+		"100": solution.Solve100,
 	}
 
 	if len(os.Args) < 2 {
