@@ -3,7 +3,6 @@ package solutions
 import (
 	"fmt"
 	utils "project-euler/go/utils"
-	"strconv"
 )
 
 func Solve7() {
@@ -20,5 +19,5 @@ func Solve7() {
 		j++
 	}
 
-	fmt.Println("The 10001st prime number is: " + strconv.Itoa(primeNumber))
+	fmt.Printf("The 10001st prime number is: %d", primeNumber)
 }

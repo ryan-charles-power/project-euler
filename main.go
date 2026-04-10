@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 	solution "project-euler/go"
 )
 
@@ -14,7 +15,7 @@ func main() {
 		"3": solution.Solve3,
 		"4": solution.Solve4,
 		"5": solution.Solve5,
-		// 6
+		"6": solution.Solve6,
 		"7": solution.Solve7,
 		// ...
 		"11": solution.Solve11,
@@ -27,7 +28,12 @@ func main() {
 
 	problem := os.Args[1]
 	if solveFunc, ok := solutions[problem]; ok {
+		start := time.Now()
+
 		solveFunc()
+
+		duration := time.Since(start)
+		fmt.Printf("\n--- Problem %s took %v with Go ---\n", problem, duration)
 	} else {
 		fmt.Printf("Problem %s not implemented yet.\n", problem)
 	}

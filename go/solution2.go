@@ -2,7 +2,6 @@ package solutions
 
 import (
 	"fmt"
-	"strconv"
 )
 
 func Solve2() {
@@ -20,5 +19,5 @@ func Solve2() {
 		i = temp
 	}
 
-	fmt.Println("The sum of all even fibonacci numbers less than 4,000,000 is " + strconv.Itoa(sum))
+	fmt.Printf("The sum of all even fibonacci numbers less than 4,000,000 is %d", sum)
 }

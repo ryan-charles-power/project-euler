@@ -27,5 +27,5 @@ func Solve3() {
 		largest = divisor - 1
 	}
 
-	fmt.Printf("The largest prime factor of %d is %d\n", original, largest)
+	fmt.Printf("The largest prime factor of %d is %d", original, largest)
 }
