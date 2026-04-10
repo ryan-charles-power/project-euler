@@ -24,5 +24,5 @@ func Solve5() {
 		}
 	}
 
-	fmt.Println(result)
+	fmt.Printf("%d is the smallest number evenly divisable by all integers from 1 to 20", result)
 }
