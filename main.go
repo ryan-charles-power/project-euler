@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
-	"time"
 	solution "project-euler/go"
+	"time"
 )
 
 func main() {
@@ -19,6 +19,8 @@ func main() {
 		"7": solution.Solve7,
 		// ...
 		"11": solution.Solve11,
+		// ...
+		"17": solution.Solve17,
 	}
 
 	if len(os.Args) < 2 {
