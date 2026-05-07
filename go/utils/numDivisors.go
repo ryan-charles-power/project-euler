@@ -2,7 +2,7 @@ package utils
 
 import "math"
 
-func numDivisors(n int) int {
+func NumDivisors(n int) int {
 	count := 0
 	limit := int(math.Sqrt(float64(n)))
 
