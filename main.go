@@ -18,6 +18,7 @@ func main() {
 		"6": solution.Solve6,
 		"7": solution.Solve7,
 		"8": solution.Solve8,
+		"9": solution.Solve9,
 		// ...
 		"11": solution.Solve11,
 		// ...
