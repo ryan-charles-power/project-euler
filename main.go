@@ -10,16 +10,16 @@ import (
 func main() {
 	// Map problem numbers to their solution functions
 	solutions := map[string]func(){
-		"1": solution.Solve1,
-		"2": solution.Solve2,
-		"3": solution.Solve3,
-		"4": solution.Solve4,
-		"5": solution.Solve5,
-		"6": solution.Solve6,
-		"7": solution.Solve7,
-		"8": solution.Solve8,
-		"9": solution.Solve9,
-		// ...
+		"1":  solution.Solve1,
+		"2":  solution.Solve2,
+		"3":  solution.Solve3,
+		"4":  solution.Solve4,
+		"5":  solution.Solve5,
+		"6":  solution.Solve6,
+		"7":  solution.Solve7,
+		"8":  solution.Solve8,
+		"9":  solution.Solve9,
+		"10": solution.Solve10,
 		"11": solution.Solve11,
 		// ...
 		"17": solution.Solve17,
