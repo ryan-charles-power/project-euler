@@ -18,7 +18,7 @@ func Solve11() {
 	// Convert the byte slice to a string.
 	gridStr := string(fileContent)
 
-	// 1. Split into lines (rows)
+	// Split into lines (rows)
 	lines := strings.Split(strings.TrimSpace(gridStr), "\n")
 
 	// Create the 2D slice
