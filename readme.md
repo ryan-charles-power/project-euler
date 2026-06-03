@@ -60,6 +60,7 @@ Example: `python main.py 1`
 |Problem 11| ✅ |    ✅   |
 |Problem 12| ✅ |    ❌   |
 |Problem 13| ✅ |    ❌   |
+|Problem 14| ✅ |    ❌   |
 | ...      | ... | ...     |
 |Problem 17| ✅ |    ❌   |
 | ...      | ... | ...     |
