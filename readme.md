@@ -64,6 +64,8 @@ Example: `python main.py 1`
 | ...      | ... | ...     |
 |Problem 17| ✅ |    ❌   |
 | ...      | ... | ...     |
+|Problem 19| ✅ |    ❌   |
+| ...      | ... | ...     |
 |Problem 44| ✅ |    ❌   |
 | ...      | ... | ...     |
 |Problem 96| ✅ |    ❌   |
